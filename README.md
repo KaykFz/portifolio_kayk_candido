@@ -48,5 +48,13 @@ Atualmente cursando o [2º] período de [Ánalise e Desenvolvimento de Sistemas]
 ### 🏗 Estrutura do Repositório
 Abaixo, a organização deste repositório para facilitar a navegação:
  
-- `root/`: Arquivo de apresentação principal.
-- `/projeto-nome/`: Pasta contendo o código-fonte, documentação e o README específico do projeto acadêmico.
+├── README.md (Principal)
+├── .github/ (Opcional: para imagens e assets)
+├── cv/
+│   ├── script_criacao.sql
+│   ├── diagrama_er.png
+│   └── README.md (Específico do projeto)
+└── inteligencia-artificial-01/
+    ├── notebook_analise.ipynb
+    ├── dataset.csv
+    └── README.md (Específico do projeto)
