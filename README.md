@@ -15,7 +15,7 @@ Atualmente cursando o [2º] período de [Ánalise e Desenvolvimento de Sistemas]
  
 * **Habilidades Técnicas:** [Python, Java, SQL, AWS].
 * **Habilidades Socioemocionais:** Trabalho em equipe, comunicação assertiva e organização com foco no objetivo.
-* **Experiência/Projetos Relevantes:** Atuei em [Projeto de Iniciação Científica/Estágio] onde desenvolvi [resultado principal].
+* **Experiência/Projetos Relevantes:** Atuei no atendimento e organização de agenda em clínica, onde também desenvolvi uma planilha automatizada para controle de horários e otimização do fluxo de atendimentos, aplicando conceitos básicos como organização de dados, uso de fórmulas e melhoria de processos.
  
 ---
  
