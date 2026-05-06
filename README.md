@@ -42,6 +42,7 @@ Atualmente cursando o [2º] período de [Ánalise e Desenvolvimento de Sistemas]
 | :--- | :--- | :---: |
 | **Laboratório de Classificação Visual** | Treina um modelo usando um conjunto de imagens propositalmente enviesado, baseado em estereótipos. | [Ver Projeto](SM2-Laboratório-de-Classificação-Visual) |
 | **Engenharia Reversa** | Neste projeto foi realizado uma plataforma de design de interface (UI) que materializa a evolução estética do Neumorfismo (Soft UI). | [Ver Projeto](SM4-Engenharia-Reversa) |
+| **Do Clone ao Produto Mínimo Viável (MVP+)** | Neste projeto foi realizado uma plataforma de design de interface (UI) que materializa a evolução estética do Neumorfismo (Soft UI). | [Ver Projeto](SM5-Do-Clone-ao-Produto-Mínimo-Viável-(MVP+)) |
  
 ---
  
