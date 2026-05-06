@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User information stored in Firestore",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "format": "email", "description": "User email" },
+        "displayName": { "type": "string", "description": "User display name" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Account creation date" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Design": {
+      "title": "Neumorphic Design",
+      "description": "A saved neumorphic design configuration",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Design unique ID" },
+        "uid": { "type": "string", "description": "Owner UID" },
+        "name": { "type": "string", "description": "Design name" },
+        "color": { "type": "string", "description": "Hex color" },
+        "size": { "type": "number", "description": "Element size" },
+        "radius": { "type": "number", "description": "Border radius" },
+        "distance": { "type": "number", "description": "Shadow distance" },
+        "intensity": { "type": "number", "description": "Shadow intensity" },
+        "blur": { "type": "number", "description": "Shadow blur" },
+        "shape": { "type": "string", "enum": ["flat", "concave", "convex", "pressed"], "description": "Surface shape" },
+        "isPublic": { "type": "boolean", "description": "Whether the design is shared with the community" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Creation timestamp" }
+      },
+      "required": ["uid", "name", "color", "size", "radius", "distance", "intensity", "blur", "shape"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "User",
+      "description": "User profile documents"
+    },
+    "/designs/{designId}": {
+      "schema": "Design",
+      "description": "Saved designs collection"
+    }
+  }
+}

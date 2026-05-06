@@ -1,0 +1,106 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: users
+    // Document ID: {uid}
+    // Fields:
+    //   - uid: string (required) - Firebase Auth UID
+    //   - email: string (required, email format) - User email
+    //   - displayName: string (optional) - User display name
+    //   - createdAt: timestamp (optional) - Account creation date
+    //
+    // Collection: designs
+    // Document ID: {designId}
+    // Fields:
+    //   - uid: string (required) - Owner UID
+    //   - name: string (required, max 50 chars) - Design name
+    //   - color: string (required, hex format) - Hex color
+    //   - size: number (required, 50-400) - Element size
+    //   - radius: number (required, 0-200) - Border radius
+    //   - distance: number (required, 5-50) - Shadow distance
+    //   - intensity: number (required, 0.05-0.3) - Shadow intensity
+    //   - blur: number (required, 0-100) - Shadow blur
+    //   - shape: string (required, enum) - Surface shape
+    //   - isPublic: bool (optional) - Shared with community
+    //   - createdAt: timestamp (optional) - Creation timestamp
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isDocOwner() {
+      return isAuthenticated() && request.auth.uid == resource.data.uid;
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isValidHexColor(color) {
+      return color is string && color.matches("^#[0-9a-fA-F]{6}$");
+    }
+
+    function isValidShape(shape) {
+      return shape in ['flat', 'concave', 'convex', 'pressed'];
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidUser(data) {
+      return data.uid == request.auth.uid &&
+             isValidEmail(data.email) &&
+             (data.get('displayName', null) == null || data.get('displayName', '') is string) &&
+             (data.get('createdAt', null) == null || data.createdAt is timestamp);
+    }
+
+    function isValidDesign(data) {
+      return data.keys().hasAll(['uid', 'name', 'color', 'size', 'radius', 'distance', 'intensity', 'blur', 'shape']) &&
+             data.uid == request.auth.uid &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             isValidHexColor(data.color) &&
+             data.size is number &&
+             data.radius is number &&
+             data.distance is number &&
+             data.intensity is number &&
+             data.blur is number &&
+             isValidShape(data.shape) &&
+             (data.get('isPublic', false) is bool) &&
+             (data.get('createdAt', null) == null || data.createdAt is timestamp);
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+      allow create: if isOwner(uid) && isValidUser(request.resource.data);
+      allow update: if isOwner(uid) && isValidUser(request.resource.data);
+    }
+
+    match /designs/{designId} {
+      // Allow reading if owner OR if design is public
+      allow read: if (isAuthenticated() && request.auth.uid == resource.data.uid) || (resource.data.get('isPublic', false) == true);
+      
+      allow create: if isAuthenticated() && isValidDesign(request.resource.data);
+      allow update: if isAuthenticated() && request.auth.uid == resource.data.uid && isValidDesign(request.resource.data);
+      allow delete: if isAuthenticated() && request.auth.uid == resource.data.uid;
+    }
+  }
+}
