@@ -19,11 +19,11 @@ O assistente (Gems) utilizado para modelagem das letras pode ser acessado atrav�
 ## 🎧 Músicas Geradas
 | Faixa | Título | Estilo/Referência | Link do Áudio |
 | :--- | :--- | :--- | :--- |
-| 01 | [Luar Seco] | [Pop Alternativo] | [Arquivo MP3](SM8-Composição-Musical-Assistida-Por-Inteligência-Artificial/audio/Luar-Seco) |
-| 02 | [Caminhada de Mão Dada] | [Reaggae] | [Arquivo MP3](SM8-Composição-Musical-Assistida-Por-Inteligência-Artificial/audio/Caminhada-de-Mão-Dada) |
-| 03 | [Luz na Estrada] | [Pop/Rock] | [Arquivo MP3](SM8-Composição-Musical-Assistida-Por-Inteligência-Artificial/audio/Luz-na-Estrada) |
-| 04 | [Sombra do Meio-Dia] | [Trap] | [Arquivo MP3](SM8-Composição-Musical-Assistida-Por-Inteligência-Artificial/audio/Sombra-do-Meio-Dia) |
-| 05 | [Janela Sem Luz] | [Britpop] | [Arquivo MP3](SM8-Composição-Musical-Assistida-Por-Inteligência-Artificial/audio/Janela-Sem-Luz) |
+| 01 | [Luar Seco] | [Pop Alternativo] | [Arquivo MP3](/audio/Luar-Seco.mp3) |
+| 02 | [Caminhada de Mão Dada] | [Reaggae] | [Arquivo MP3](/audio/Caminhada-de-Mão-Dada.mp3) |
+| 03 | [Luz na Estrada] | [Pop/Rock] | [Arquivo MP3](/audio/Luz-na-Estrada.mp3) |
+| 04 | [Sombra do Meio-Dia] | [Trap] | [Arquivo MP3](/audio/Sombra-do-Meio-Dia.mp3) |
+| 05 | [Janela Sem Luz] | [Britpop] | [Arquivo MP3](/audio/Janela-Sem-Luz.mp3) |
  
 ## 📄 Processo de Criação
 1. **Curadoria:** Seleção de 10 letras do artista base.
