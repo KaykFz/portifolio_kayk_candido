@@ -43,6 +43,7 @@ Atualmente cursando o [2º] período de [Ánalise e Desenvolvimento de Sistemas]
 | **Laboratório de Classificação Visual** | Treina um modelo usando um conjunto de imagens propositalmente enviesado, baseado em estereótipos. | [Ver Projeto](SM2-Laboratório-de-Classificação-Visual) |
 | **Engenharia Reversa** | Projeto de Desenvolvimento assistido por IA, competências emergentes e os limites éticos da engenharia reversa, destacando pensamento crítico, adaptação tecnológica e originalidade na criação de software. | [Ver Projeto](SM4-Engenharia-Reversa) |
 | **Do Clone ao Produto Mínimo Viável (MVP+)** | Neste projeto foi realizado uma plataforma de design de interface (UI) que materializa a evolução estética do Neumorfismo (Soft UI). | [Ver Projeto](SM5-Do-Clone-ao-Produto-Mínimo-Viável-(MVP+)) |
+| **Composição Musical Assistida por Inteligência Artificial** | Um projeto desenvolvido a partir da visão de um produtor musical e engenheiro de prompts, para explorar o potencial das ferramentas de IA Generativa para a criação de conteúdo artístico utilizando LLMs (Large Language Models) para análise de estilo e IA Generativa de Áudio para a produção fonográfica. | [Ver Projeto](SM8-Composição-Musical-Assistida-por-Inteligência-Artificial) |
  
 ---
  
