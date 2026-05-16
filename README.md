@@ -55,7 +55,6 @@ Abaixo, a organização deste repositório para facilitar a navegação:
 ├── README.md (Principal)
 
 ├── cv/
-
 │          
 │ Curriculo_Kayk_Ferreira_Candido.pdf
 
