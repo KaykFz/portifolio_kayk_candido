@@ -34,3 +34,5 @@ Dados inconsistentes são corrigidos ou removidos, e especialistas continuam aud
 * **Diagnóstico Crítico:** Capacidade de identificar falhas lógicas e distorções causadas por dados enviesados.
 * **Rigor Gramatical:** Aplicação obrigatória de verbos no presente do indicativo na fundamentação do memorial ético.
 * **Intervenção Prática:** Proposta de mecanismos de curadoria humana para assegurar a equidade e a mitigação de danos em sistemas automatizados.
+
+Autor: Kayk Ferreira Cândido
